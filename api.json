@@ -1,0 +1,210 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "epages-ui-storage",
+        "description": "Store and retrieve data",
+        "version": "1.0.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/{shopId}/config": {
+            "get": {
+                "summary": "Shops",
+                "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    }
+                ],
+                "tags": [
+                    "Config"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "All shop configuration"
+                    }
+                }
+            }
+        },
+        "/{shopId}/pages": {
+            "get": {
+                "summary": "Pages",
+                "description": "List all page of the corresponding shop\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    }
+                ],
+                "tags": [
+                    "Pages"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pages"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Pages",
+                "description": "List all page of the corresponding shop\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    }
+                ],
+                "tags": [
+                    "Pages"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pages"
+                    }
+                }
+            }
+        },
+        "/{shopId}/pages/{pageId}": {
+            "get": {
+                "summary": "Page",
+                "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    },
+                    {
+                        "name": "pageId",
+                        "in": "path",
+                        "description": "Id of the page to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Pages"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of products"
+                    }
+                }
+            },
+            "put": {
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    },
+                    {
+                        "name": "pageId",
+                        "in": "path",
+                        "description": "Id of the page to update",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of products"
+                    }
+                }
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    },
+                    {
+                        "name": "pageId",
+                        "in": "path",
+                        "description": "Id of the page to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of products"
+                    }
+                }
+            }
+        },
+        "/{shopId}/themes": {
+            "get": {
+                "summary": "Themes",
+                "description": "List all page of the corresponding shop\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    }
+                ],
+                "tags": [
+                    "Themes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pages"
+                    }
+                }
+            }
+        },
+        "/{shopId}/themes/{themeId}": {
+            "get": {
+                "summary": "Themes",
+                "description": "List all page of the corresponding shop\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    },
+                    {
+                        "name": "themeId",
+                        "in": "path",
+                        "description": "Id of the theme to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Themes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pages"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Themes",
+                "description": "List all page of the corresponding shop\n",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/shopIdParam"
+                    },
+                    {
+                        "name": "themeId",
+                        "in": "path",
+                        "description": "Id of the theme to get",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Themes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of pages"
+                    }
+                }
+            }
+        }
+    },
+    "parameters": {
+        "shopIdParam": {
+            "name": "shopId",
+            "in": "path",
+            "description": "Shop id to access",
+            "required": true,
+            "type": "string"
+        }
+    }
+}

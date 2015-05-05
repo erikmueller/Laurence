@@ -1,0 +1,18 @@
+'use strict';
+/**
+ * Operations on /{shopId}/config
+ */
+module.exports = {
+    /**
+     * The Products endpoint returns information about the *Uber* products
+offered at a given location. The response includes the display name
+and other details about each product, and lists the products in the
+proper display order.
+
+     * parameters: 
+     * produces: 
+     */
+    get: function (req, res) {
+        res.send(501);
+    }
+};
